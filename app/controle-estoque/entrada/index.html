@@ -1,0 +1,126 @@
+﻿<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <h1>Nova entrada</h1>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-md-12">
+         <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-add" ng-click="vm.voltarParaControleEstoque()">Voltar</button>
+         </div>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-md-12">
+
+         <form method="post">
+            <div class="row">
+               <div class="col-md-2">
+                  <div class="form-group">
+                     <label for="codItem">Código do item</label>
+                     <input type="text" name="codItem" id="codItem" ng-model="vm.saidaEstoqueAtual.codItem"
+                        class="form-control" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="dataEntrada">Data de entrada</label>
+                     <input type="text" name="dataEntrada" id="dataEntrada" ng-model="vm.saidaEstoqueAtual.dataEntrada" placeholder="dd/mm/aaaa"
+                        class="form-control" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="tipo">Tipo</label>
+                     <input type="text" name="tipo" id="tipo" ng-model="vm.saidaEstoqueAtual.tipo" class="form-control"
+                        placeholder="Vestido, Saia, Conjunto, etc" />
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-2">
+                  <div class="form-group">
+                     <label for="marca">Marca</label>
+                     <input type="text" name="marca" id="marca" ng-model="vm.saidaEstoqueAtual.marca"
+                        class="form-control" placeholder="Fórum, Namine, etc" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="caracteristicas">Características</label>
+                     <input type="text" name="caracteristicas" id="caracteristicas"
+                        ng-model="vm.saidaEstoqueAtual.caracteristicas" class="form-control" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="tamanho">Tamanho</label>
+                     <input type="text" name="tamanho" id="tamanho" ng-model="vm.saidaEstoqueAtual.tamanho"
+                        class="form-control" />
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-2">
+                  <div class="form-group">
+                     <label for="cor">Cor</label>
+                     <input type="text" name="cor" id="cor" ng-model="vm.saidaEstoqueAtual.cor" class="form-control" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="valorEtiqueta">Valor de etiqueta na compra</label>
+                     <input type="text" name="valorEtiqueta" id="valorEtiqueta"
+                        ng-model="vm.saidaEstoqueAtual.valorEtiqueta" class="form-control" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="valorPago">Valor pago na compra</label>
+                     <input type="text" name="valorPago" id="valorPago" ng-model="vm.saidaEstoqueAtual.valorPago"
+                        class="form-control" />
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-2">
+                  <div class="form-group">
+                     <label for="valorMargem">Valor para margem de 100%</label>
+                     <input type="text" disabled name="valorMargem" id="valorMargem"
+                        value="{{vm.saidaEstoqueAtual.valorPago * 2}}" class="form-control" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="precoSugerido">Preço sugerido</label>
+                     <input type="text" name="precoSugerido" id="precoSugerido"
+                        ng-model="vm.saidaEstoqueAtual.precoSugerido" class="form-control" />
+                  </div>
+               </div>
+               <div class="col-md-2 col-md-offset-2">
+                  <div class="form-group">
+                     <label for="quantidade">Quantidade</label>
+                     <input type="number" name="quantidade" id="quantidade"
+                        ng-model="vm.saidaEstoqueAtual.quantidade" class="form-control" />
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-2">
+                  <div class="form-group">
+                     <button type="submit" class="btn btn-primary" ng-click="vm.addSaidaEstoque()">Adicionar</button>
+                  </div>
+                  <div class="form-group">
+                     <button type="submit" class="btn btn-danger" ng-click="vm.clearAll()">Limpar</button>
+                  </div>
+               </div>
+
+            </div>
+         </form>
+      </div>
+   </div>
+
+</div>
