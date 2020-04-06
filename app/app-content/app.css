@@ -5,3 +5,15 @@
 .flash-message {
     margin-top: 20px;
 }
+
+.container {
+   width: 100%;
+}
+
+.dinheiro {
+   text-align: right;
+}
+
+.centralizar {
+   text-align: center;
+}
