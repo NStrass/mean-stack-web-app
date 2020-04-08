@@ -25,13 +25,6 @@
                 controllerAs: 'vm',
                 data: { activeTab: 'account' }
             })
-            .state('questions', {
-                url: '/questions',
-                templateUrl: 'questions/index.html',
-                controller: 'Questions.IndexController',
-                controllerAs: 'vm',
-                data: { activeTab: 'questions' }
-            })
             .state('controle-estoque', {
                url: '/controle-estoque',
                templateUrl: 'controle-estoque/index.html',
@@ -40,7 +33,7 @@
                data: { activeTab: 'controle-estoque' }
            })
             .state('nova-entrada', {
-               url: '/controle-estoque/nova-entrada',
+               url: '/controle-estoque/nova-entrada/:id',
                templateUrl: 'controle-estoque/entrada/index.html',
                controller: 'ControleEstoqueEntrada.IndexController',
                controllerAs: 'vm',

@@ -40,7 +40,7 @@
         }
 
         function GetById(_id) {
-            return $http.getapiURL + (apiURL + '/' + _id).then(handleSuccess, handleError);
+            return $http.get(apiURL + '/' + _id).then(handleSuccess, handleError);
         }
 
         function GetByUsername(username) {

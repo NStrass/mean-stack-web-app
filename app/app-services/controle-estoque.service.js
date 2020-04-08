@@ -10,6 +10,7 @@
         var service = {};
 
         service.getToken = getToken;
+        service.getById = getById;
         service.getAllEntrada = getAllEntrada;
         service.getAllSaida = getAllSaida;
         service.getAll = getAll;
@@ -24,6 +25,10 @@
             return $.get('/app/token');
         }
 
+         function getById(_id) {
+            return $http.get(apiURL + '/' + _id).then(handleSuccess, handleError);
+         }
+
         function getAllEntrada() {
             return $http.get(apiURL + '/entradas').then(handleSuccess, handleError);
         }
@@ -37,7 +42,7 @@
         }
 
         function create(movimentacao) {
-            return $http.post(apiURL + '/create', {"movimentacao": movimentacao}).then(handleSuccess, handleError);
+            return $http.post(apiURL + '/create', movimentacao).then(handleSuccess, handleError);
         }
 
         function remove(_id) {
@@ -45,7 +50,7 @@
         }
 
         function edit(_id, novaMovimentacao) {
-            return $http.put(apiURL + '/' + _id, {"movimentacao": novaMovimentacao}).then(handleSuccess, handleError);
+            return $http.put(apiURL + '/' + _id,  novaMovimentacao).then(handleSuccess, handleError);
         }
 
         // private functions
