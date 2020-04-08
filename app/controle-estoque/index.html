@@ -18,13 +18,13 @@
    </div>
    <div class="row">
       <div class="col-md-12">
-         <h3>Movimentação</h3>
+         <h3>Produtos</h3>
       </div>
    </div>
    <div class="row">
       <div class="col-md-12">
-         <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
+         <table class="table table-condensed table-bordered table-striped">
+            <thead>
                <tr>
                   <th>Código do item</th>
                   <th>Data de entrada</th>
@@ -38,10 +38,12 @@
                   <th>Valor pago</th>
                   <th>Valor margem</th>
                   <th>Preço sugerido</th>
+                  <th>Editar</th>
+                  <th>Excluir</th>
                </tr>
             </thead>
             <tbody ng-repeat="movimentacao in vm.movimentacoes track by movimentacao._id">
-               <tr>
+               <tr ng-class="{'red': movimentacao.quantidade <= 0}">
                   <th class="centralizar">{{movimentacao.codItem}}</th>
                   <th class="centralizar">{{movimentacao.dataEntrada | date:'dd/MM/yyyy'}}</th>
                   <th class="centralizar">{{movimentacao.tipo}}</th>
@@ -54,6 +56,12 @@
                   <th class="dinheiro">{{movimentacao.valorPago | currency: "R$"}}</th>
                   <th class="dinheiro">{{movimentacao.valorPago * 2 | currency: "R$"}}</th>
                   <th class="dinheiro">{{movimentacao.precoSugerido | currency: "R$"}}</th>
+                  <th class="centralizar">
+                     <button class="btn btn-primary" ng-click="vm.editar(movimentacao._id)">Editar</button>
+                  </th>
+                  <th class="centralizar">
+                     <button class="btn btn-danger" ng-click="vm.querRealmenteDeletar(movimentacao._id)">Excluir</button>
+                  </th>
                </tr>
             </tbody>
          </table>

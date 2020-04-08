@@ -17,3 +17,8 @@
 .centralizar {
    text-align: center;
 }
+
+.red {
+   background-color: #C10000 !important;
+   color: #fff;
+} 
