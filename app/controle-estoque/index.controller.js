@@ -5,7 +5,7 @@
       .module('app')
       .controller('ControleEstoque.IndexController', Controller);
 
-   function Controller(ControleEstoqueService, FlashService, $location, $state) {
+   function Controller(ControleEstoqueService, FlashService, $location) {
       const vm = this;
 
       vm.movimentacoes = null;
@@ -50,12 +50,13 @@
          $location.path('/controle-estoque/nova-saida');
       }
 
+      function editar(id) {
+         $location.path('/controle-estoque/nova-entrada/' + id);
+      }
+
       function irParaEntradas() {
          $location.path('/controle-estoque/nova-entrada');
       }
 
-      function editar(id) {
-         $location.path('/controle-estoque/nova-entrada/' + id);
-      }
    }
 })(); 

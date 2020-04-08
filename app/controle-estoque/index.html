@@ -8,10 +8,10 @@
       <div class="col-md-12">
          <form method="post">
             <div class="form-group">
-               <button type="submit" class="btn btn-primary btn-add" ng-click="vm.irParaEntradas()">Nova Entrada</button>
+               <button type="button" class="btn btn-primary btn-add" ng-click="vm.irParaEntradas()">Nova Entrada</button>
             </div>
             <div class="form-group">
-               <button type="submit" class="btn btn-danger" ng-click="vm.irParaSaidas()">Nova Saída</button>
+               <button type="button" class="btn btn-danger" ng-click="vm.irParaSaidas()">Nova Saída</button>
             </div>
          </form>
       </div>
@@ -57,10 +57,10 @@
                   <th class="dinheiro">{{movimentacao.valorPago * 2 | currency: "R$"}}</th>
                   <th class="dinheiro">{{movimentacao.precoSugerido | currency: "R$"}}</th>
                   <th class="centralizar">
-                     <button class="btn btn-primary" ng-click="vm.editar(movimentacao._id)">Editar</button>
+                     <button type="button" class="btn btn-primary" ng-click="vm.editar(movimentacao._id)">Editar</button>
                   </th>
                   <th class="centralizar">
-                     <button class="btn btn-danger" ng-click="vm.querRealmenteDeletar(movimentacao._id)">Excluir</button>
+                     <button type="button" class="btn btn-danger" ng-click="vm.querRealmenteDeletar(movimentacao._id)">Excluir</button>
                   </th>
                </tr>
             </tbody>
