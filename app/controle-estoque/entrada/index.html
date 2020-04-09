@@ -1,22 +1,21 @@
 ﻿<div class="container">
    <div class="row">
       <div class="col-md-12">
-         <h1 ng-if="!vm.ehParaAtualizar">Nova entrada</h1>
-         <h1 ng-if="vm.ehParaAtualizar">Atualizar produto</h1>
+         <h1 ng-show="!vm.ehParaAtualizar">Nova entrada</h1>
+         <h1 ng-show="vm.ehParaAtualizar">Atualizar produto</h1>
       </div>
    </div>
 
    <div class="row">
       <div class="col-md-12">
          <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-add" ng-click="vm.voltarParaControleEstoque()">Voltar</button>
+            <button type="button" class="btn btn-primary btn-add" ng-click="vm.voltarParaControleEstoque()">Voltar</button>
          </div>
       </div>
    </div>
 
    <div class="row">
       <div class="col-md-12">
-
          <form method="post">
             <div class="row">
                <div class="col-md-2">
@@ -111,11 +110,11 @@
             </div>
             <div class="row">
                <div class="col-md-2">
-                  <div class="form-group" ng-if="!vm.ehParaAtualizar">
+                  <div class="form-group" ng-show="!vm.ehParaAtualizar">
                      <button type="submit" class="btn btn-primary" ng-click="vm.addEntradaEstoque()">Adicionar</button>
                   </div>
 
-                  <div class="form-group" ng-if="vm.ehParaAtualizar">
+                  <div class="form-group" ng-show="vm.ehParaAtualizar">
                      <button type="submit" class="btn btn-primary" ng-click="vm.atualizar()">Atualizar</button>
                   </div>
                   

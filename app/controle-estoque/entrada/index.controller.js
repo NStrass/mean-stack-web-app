@@ -92,22 +92,17 @@
             && vm.saidaEstoqueAtual.marca !== ""
             && vm.saidaEstoqueAtual.marca !== undefined
 
-            && vm.saidaEstoqueAtual.caracteristicas !== null
-            && vm.saidaEstoqueAtual.caracteristicas !== ""
-            && vm.saidaEstoqueAtual.caracteristicas !== undefined
-         
-            && vm.saidaEstoqueAtual.tamanho !== null
-            && vm.saidaEstoqueAtual.tamanho !== ""
-            && vm.saidaEstoqueAtual.tamanho !== undefined
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'P'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'PP'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'M'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'G'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'GG'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'GGG'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'XG'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'XXG'
-            && vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'XXXG'
+            && ( 
+                  vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'P'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'PP'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'M'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'G'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'GG'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'GGG'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'XG'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'XXG'
+               || vm.saidaEstoqueAtual.tamanho.toUpperCase() !== 'XXXG'
+            )
 
             && vm.saidaEstoqueAtual.cor !== null
             && vm.saidaEstoqueAtual.cor !== ""

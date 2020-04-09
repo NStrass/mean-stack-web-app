@@ -37,7 +37,10 @@
                templateUrl: 'controle-estoque/entrada/index.html',
                controller: 'ControleEstoqueEntrada.IndexController',
                controllerAs: 'vm',
-               data: { activeTab: 'controle-estoque' }
+               data: { activeTab: 'controle-estoque' },
+               params: {
+                  id: { squash: true, value: null }
+               }
            })
             .state('nova-saida', {
                url: '/controle-estoque/nova-saida',
